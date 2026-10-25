@@ -333,6 +333,11 @@ class ParityTests(unittest.TestCase):
         self.assertLessEqual(ascii, set(header_bar.GLYPHS))
         self.assertEqual(header_bar.clean_text('bbno$ #1 [x] {y} a|b ~c ^d `e` f\\g'), 'bbno$ #1 [x] {y} a|b ~c ^d `e` f\\g')
 
+    def test_ukrainian_letters_are_drawn_without_folding(self):
+        ukrainian = set('ҐґЄєІіЇїАаБбВвГгДдЕеЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯяʼ')
+        self.assertLessEqual(ukrainian, set(header_bar.GLYPHS))
+        self.assertEqual(header_bar.clean_text('Привіт, Україно!'), 'Привіт, Україно!')
+
     def test_a_heart_is_drawn_and_an_emoji_heart_brings_no_box(self):
         # The hearts come from NotoSansSymbols2-hearts.ttf; an emoji's variation selector has no glyph, and LVGL would
         # draw a box for it after the heart.
