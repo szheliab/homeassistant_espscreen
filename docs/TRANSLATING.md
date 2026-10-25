@@ -91,7 +91,8 @@ A partial check helps too. Say which sections you went through, and leave `check
 | Script | Languages | Screens |
 | --- | --- | --- |
 | Latin | English, Dutch, German, French, Italian, Spanish, Portuguese, Polish, Czech, the Nordic languages, Turkish, ... | Every screen: the fonts carry every letter European languages use |
-| Cyrillic, Greek | Russian, Ukrainian, Bulgarian, Greek | Possible: those letters go only onto the screens that speak the language. Ask first: a maintainer adds them. |
+| Cyrillic, Greek | Russian, Bulgarian, Greek | Possible: those letters go only onto the screens that speak the language. Ask first: a maintainer adds them. |
+| Cyrillic | Ukrainian | The screen fonts carry the Ukrainian alphabet. |
 | Chinese, Japanese, Korean | | Only on a Guition, with the characters the texts need; a CYD has too little room and shows English |
 | Right-to-left, or letters that join | Arabic, Hebrew, Persian, Thai, Hindi | Not yet: the screens' graphics library doesn't write them without extra work |
 
